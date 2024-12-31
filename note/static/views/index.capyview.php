@@ -2,7 +2,7 @@
     New Note
 </button>
 
-<?php if($dog): ?>
+<?php if($current_note_text): ?>
     <button id="clearNoteButton">
         Clear Note
     </button>
