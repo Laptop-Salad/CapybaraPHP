@@ -1,0 +1,15 @@
+{
+    "name": "amandawallis/capybara",
+    "autoload": {
+        "psr-4": {
+            "CapyView\\": "CapyView"
+        }
+    },
+    "authors": [
+        {
+            "name": "Laptop-Salad",
+            "email": "awallis1609@gmail.com"
+        }
+    ],
+    "require": {}
+}

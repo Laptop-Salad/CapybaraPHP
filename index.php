@@ -1,5 +1,6 @@
 <?php
     require "CapyView/Compiler.php";
+    require_once 'vendor/autoload.php';
 
     session_start();
 
@@ -17,6 +18,8 @@
 
     $compiler = new \CapyView\Compiler('note/static/views/index.capyview.php');
 
-    echo $compiler->compile();
+    $file = $compiler->compile();
+
+    include $file;
 ?>
 
