@@ -1,25 +1,8 @@
 <?php
-    require "CapyView/Compiler.php";
-    require_once 'vendor/autoload.php';
 
-    session_start();
+require_once 'vendor/autoload.php';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['new'])) {
-            $_SESSION['current_note_text'] = "Start typing";
-        } else if (isset($_POST['clear'])) {
-            $_SESSION['current_note_text'] = null;
-        } else {
-            $_SESSION['current_note_text'] = $_POST['note'];
-        }
-    }
+$controller = new \Controllers\IndexController();
 
-    $current_note_text = $_SESSION['current_note_text'] ?? null;
-
-    $compiler = new \CapyView\Compiler('note/static/views/index.capyview.php');
-
-    $file = $compiler->compile();
-
-    include $file;
-
-
+$controller->mount();
+$controller->render();

@@ -2,7 +2,8 @@
     "name": "amandawallis/capybara",
     "autoload": {
         "psr-4": {
-            "CapyView\\": "CapyView"
+            "CapyView\\": "CapyView",
+            "Controllers\\": "note/controllers"
         }
     },
     "authors": [
