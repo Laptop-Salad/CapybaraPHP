@@ -3,7 +3,9 @@
     "autoload": {
         "psr-4": {
             "CapyView\\": "CapyView",
-            "Controllers\\": "note/controllers"
+            "Controllers\\": "note/controllers",
+            "Base\\": "Base",
+            "Routing\\": "Routing"
         }
     },
     "authors": [

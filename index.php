@@ -1,8 +1,11 @@
 <?php
 
+use Routing\RouteController;
+
 require_once 'vendor/autoload.php';
+require "note/routing/routes.php";
 
-$controller = new \Controllers\IndexController();
-
+$controller_string = RouteController::getInstance()->getController($_SERVER['REQUEST_URI']);
+$controller = new $controller_string();
 $controller->mount();
 $controller->render();

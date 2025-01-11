@@ -2,9 +2,11 @@
 
 namespace Controllers;
 
+use Base\Controller;
+
 require "CapyView/Compiler.php";
 
-class IndexController
+class IndexController extends Controller
 {
     public $current_note_text;
 
