@@ -7,5 +7,7 @@ require "note/routing/routes.php";
 
 $controller_string = RouteController::getInstance()->getController($_SERVER['REQUEST_URI']);
 $controller = new $controller_string();
+
 $controller->mount();
-$controller->render();
+
+include $controller->render();

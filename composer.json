@@ -6,7 +6,10 @@
             "Controllers\\": "note/controllers",
             "Base\\": "Base",
             "Routing\\": "Routing"
-        }
+        },
+        "files": [
+            "CapyView/helpers.php"
+        ]
     },
     "authors": [
         {

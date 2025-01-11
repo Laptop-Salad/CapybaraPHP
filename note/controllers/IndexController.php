@@ -3,15 +3,14 @@
 namespace Controllers;
 
 use Base\Controller;
+use function CapyView\view;
 
 require "CapyView/Compiler.php";
 
-class IndexController extends Controller
-{
+class IndexController extends Controller {
     public $current_note_text;
 
-    public function mount()
-    {
+    public function mount() {
         session_start();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -27,15 +26,10 @@ class IndexController extends Controller
         $this->current_note_text = $_SESSION['current_note_text'] ?? null;
     }
 
-    public function render()
-    {
-        $current_note_text = $this->current_note_text;
-
-        $compiler = new \CapyView\Compiler('note/static/views/index.capyview.php');
-
-        $file = $compiler->compile();
-
-        include $file;
+    public function render() {
+        return view('note/static/views/index.capyview.php', [
+            'current_note_text' => $this->current_note_text
+        ]);
     }
 }
 

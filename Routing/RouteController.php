@@ -2,9 +2,6 @@
 
 namespace Routing;
 
-use Base\Controller;
-use Controllers\IndexController;
-
 class RouteController {
     public static self $instance;
     public array $routes;
